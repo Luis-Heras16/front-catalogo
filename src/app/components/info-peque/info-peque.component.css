@@ -1,0 +1,86 @@
+/* Contenedor principal */
+.leer-mas-container {
+    background-color: #cbffc5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Elimina márgenes exteriores */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+  
+  /* Fila */
+  .row {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 20px; /* Espacio entre filas */
+  }
+
+  .row:last-child {
+    margin-bottom: 0; /* Elimina el margen en la última fila */
+  }
+  
+  /* Columnas */
+  .column {
+    flex: 1 1 calc(25% - 20px); /* Cada columna ocupa el 25% menos el espacio del gap */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Efecto hover */
+  .column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen */
+  .image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Asegura que la imagen sea cuadrada */
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Texto */
+  .column p {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Botón */
+  .btn {
+    background-color: #369b2b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d6e9d6;
+  }
+  
+  /* Adaptación para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 calc(50% - 20px); /* Ocupa 50% en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      flex: 1 1 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+  }
+  

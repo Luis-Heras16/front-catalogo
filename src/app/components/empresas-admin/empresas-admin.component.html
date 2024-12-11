@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empresas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Para iconos -->
+    <link rel="stylesheet" href="empresas-admin.component.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a  onclick="window.location.href='/LandingAdmin';">Usuarios</a></li>
+            <li><a  onclick="window.location.href='/EmpresasAdmin';">Empresas</a></li>
+            <li><a  onclick="window.location.href='/ComentariosAdmin';">Comentarios</a></li>
+            <li>
+                <button class="btn-logout" onclick="window.location.href='/Inicio';">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                </button>
+            </li>
+            
+        </ul>
+    </nav>
+
+
+    <section id="empresas" class="section">
+        <h2>Gestión de Empresas</h2>
+        <div class="main-content">
+            <!-- Tabla de Empresas -->
+            <div class="tabla-empresas">
+                <h3>Empresas Registradas</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Logo</th>
+                            <th>Descripción Corta</th>
+                            <th>Descripción Detallada</th>
+                            <th>Ofertas</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empresa ABC</td>
+                            <td><img src="logo1.png" alt="Logo Empresa ABC" class="logo"></td>
+                            <td>Soluciones tecnológicas</td>
+                            <td>Especializados en desarrollo de software y consultoría</td>
+                            <td>10% de descuento en servicios</td>
+                            <td>
+                                <button class="btn editar"><i class="fas fa-pencil-alt"></i></button>
+                                <button class="btn eliminar"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <!-- Formulario de Empresas -->
+            <div class="formulario-empresas">
+                <h3>Añadir Nueva Empresa</h3>
+                <form>
+                    <label for="nombre">Nombre de la Empresa</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre de la empresa" required>
+
+                    <label for="logo">Logo</label>
+                    <input type="file" id="logo" name="logo" accept="image/*" required>
+
+                    <label for="descripcion_corta">Descripción Corta</label>
+                    <input type="text" id="descripcion_corta" name="descripcion_corta" placeholder="Ingresa una descripción corta" required>
+
+                    <label for="descripcion_detallada">Descripción Detallada</label>
+                    <textarea id="descripcion_detallada" name="descripcion_detallada" placeholder="Ingresa una descripción detallada" rows="4" required></textarea>
+
+                    <label for="ofertas">Ofertas</label>
+                    <input type="text" id="ofertas" name="ofertas" placeholder="Ingresa las ofertas" required>
+
+                    <button type="submit" class="btn agregar">Agregar Empresa</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

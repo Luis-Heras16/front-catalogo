@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="info-xcaret.component.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<header class="navbar ">
+  <button class="btn home-btn" onclick="window.location.href='/inicio';">
+    <span class="material-icons" >home</span>
+  </button>
+</header>
+<body>
+  <div class="container">
+    <!-- Columna Izquierda -->
+    <div class="left-column">
+      <img src="1XCARET.png" alt="Logo" class="logo">
+      <ul class="item-list">
+        <li>List item <span class="checkmark">✔</span></li>
+        <li>List item <span class="checkmark">✔</span></li>
+        <li>List item <span class="checkmark">✔</span></li>
+        <li>List item <span class="checkmark">✔</span></li>
+      </ul>
+    </div>
+
+    <!-- Columna Central -->
+    <div class="center-column">
+      <h1>{{title}}</h1>
+      <p>
+        {{description}}
+      </p>
+      @for (vacante of vacantes; track $index) {
+        <h4>{{vacante.titulo}}</h4>
+        <p>{{vacante.descripcion}}</p>
+        <ul>
+          @for (requisito of vacante.requisitos; track $index) {
+            <li>{{requisito}}</li>
+          }
+        </ul>
+      }
+    </div>
+
+  </div>
+</body>
+</html>

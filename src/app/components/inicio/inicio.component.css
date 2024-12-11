@@ -1,0 +1,230 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cbffc5;
+    padding: 10px 20px;
+    border-bottom: 2px solid #cbffc5;
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+  
+  /* Botón de inicio */
+  .home-btn {
+    background-color:#1c9cf1;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .home-btn .material-icons {
+    color: #333;
+  }
+  
+  .home-btn:hover {
+  background-color: #45a049;
+}
+
+  /* Barra de búsqueda */
+  .search-bar {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Botones de usuario */
+  .user-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d6e9d6;
+  }
+  
+  .logout-btn {
+    background-color: #ffcccc;
+    border: 1px solid #ff9999;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff9999;
+  }
+  /* Asegurarnos de que el carrusel ocupe todo el espacio de la página */
+html, body {
+    height: 100%;  /* Asegurar que el body y html ocupen todo el alto de la página */
+    margin: 0;  /* Eliminar márgenes predeterminados */
+  }
+  
+  #carouselExampleRide {
+    width: 100vw;  /* Ocupa todo el ancho de la ventana */
+    height: 60vh;  /* Ocupa todo el alto de la ventana */
+    background-color: #cbffc5;  /* Color de fondo */
+    display: flex;
+    justify-content: center;  /* Centra el contenido (las imágenes) */
+    align-items: center;  /* Centra el contenido (las imágenes) */
+    overflow: hidden;  /* Oculta cualquier contenido que se desborde */
+    position: relative;  /* Necesario para posicionar las flechas */
+  }
+  
+  /* Establecer la altura del carrusel al 100% del contenedor */
+  .carousel-inner {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Estilo de las imágenes para que se ajusten al carrusel */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;  /* Asegura que la imagen ocupe toda la altura */
+    object-fit: cover;  /* Ajusta la imagen sin deformarla */
+    border-radius: 10px;  /* Bordes redondeados si es necesario */
+  }
+  
+  /* Personalizar las flechas de navegación */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);  /* Color de fondo de las flechas */
+    border-radius: 50%;  /* Hacer las flechas redondas */
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #cbffc5;  /* Color de fondo de las flechas */
+    border: none;  /* Eliminar borde */
+    color: rgb(0, 0, 0);  /* Color de las flechas */
+    padding: 10px;
+    z-index: 10;  /* Asegura que las flechas estén por encima de las imágenes */
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: #cbffc5;  /* Efecto hover para las flechas */
+  }
+  
+  /* Asegurarse de que los controles son accesibles */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;  /* Ancho de las flechas */
+    height: 30px;  /* Altura de las flechas */
+  }
+  /* Contenedor principal */
+.leer-mas-container {
+    background-color: #cbffc5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Elimina márgenes exteriores */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    box-sizing: border-box;
+  }
+  
+  /* Fila */
+  .row {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    flex-wrap: wrap; /* Asegura que las columnas se ajusten en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+    margin-bottom: 20px; /* Espacio entre filas */
+  }
+
+  .row:last-child {
+    margin-bottom: 0; /* Elimina el margen en la última fila */
+  }
+  
+  /* Columnas */
+  .column {
+    flex: 1 1 calc(25% - 20px); /* Cada columna ocupa el 25% menos el espacio del gap */
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Efecto hover */
+  .column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen */
+  .image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Asegura que la imagen sea cuadrada */
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Texto */
+  .column p {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Botón */
+  .infobtn {
+    background-color: #369b2b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d6e9d6;
+  }
+  
+  /* Adaptación para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 calc(50% - 20px); /* Ocupa 50% en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .column {
+      flex: 1 1 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+  }
+  

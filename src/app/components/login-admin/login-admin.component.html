@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Administrador</title>
+  <link rel="stylesheet" href="login-admin.component.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bienvenido Administrador</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="name">Ingresa tu Matricula</label>
+      <input type="text" id="matricula" name="matricula" placeholder="Ingresa tu matricula" formControlName="matricula" required>
+
+      <label for="contraseña">contraseña</label>
+      <input type="contraseña" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" formControlName="contraseña" required>
+
+      <button type="submit" class="login-btn">Iniciar Sesión</button>
+      <button onclick="window.location.href='/inicio';" class="btn-logout">Cancelar</button>
+    </form>
+  </div>
+</body>
+</html>

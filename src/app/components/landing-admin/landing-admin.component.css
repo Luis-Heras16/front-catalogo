@@ -1,0 +1,231 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #b1ebabda;
+    padding: 1rem;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra los elementos verticalmente */
+    position: relative; /* Permite posicionar el botón si es necesario */
+}
+
+/* Lista del navbar */
+.navbar ul {
+    display: flex; /* Elementos en línea */
+    list-style: none;
+    gap: 2rem; /* Espacio entre elementos */
+    padding: 0;
+    margin: 0 auto; /* Centra los elementos horizontalmente */
+}
+
+.navbar ul li {
+    text-align: center;
+}
+
+.navbar ul li a {
+    color: rgb(0, 0, 0); /* Cambia el texto de los enlaces a blanco */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover {
+    color: #056429; /* Cambia el color al pasar el cursor para mejor visibilidad */
+}
+
+/* Botón de cerrar sesión */
+.btn-logout {
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Texto e ícono oscuros */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer; /* Muestra el cursor de mano */
+    display: flex; /* Alineación del ícono y texto */
+    align-items: center; /* Centrado vertical */
+    gap: 0.5rem; /* Espacio entre ícono y texto */
+    position: absolute; /* Posicionamiento absoluto */
+    right: 1rem; /* Pega el botón al extremo derecho */
+}
+
+/* Efectos al pasar el cursor */
+.btn-logout:hover {
+    background-color: #f4f4f4; /* Fondo ligeramente más oscuro */
+    color: #000; /* Texto más oscuro */
+}
+
+/* Sección general */
+.section {
+    padding: 2rem;
+    background: #cbffc5;
+    border-radius: 8px;
+    width: 100%;
+}
+.section h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+/* Estilo de la tabla */
+.table {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.table th {
+    background: #598b53;
+    color: white;
+}
+
+.table td {
+    background: #f9f9f9;
+}
+
+form {
+    width: 100%; /* Formulario ocupa todo el ancho del contenedor */
+    display: grid;
+    gap: 1rem; /* Espacio entre los elementos del formulario */
+}
+
+/* Tabla de Usuarios - ocupar 2/3 del espacio horizontal */
+.tabla-usuarios {
+    flex: 2; /* Asigna dos partes del espacio */
+    display: block; /* Elimina la alineación vertical */
+}
+
+.tabla-usuarios h3 {
+    text-align: center; /* Centra el texto del título */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+    width: 100%;
+}
+
+.tabla-usuarios table {
+    width: 100%; /* Tabla ocupa todo el ancho de su contenedor */
+    border-collapse: collapse;
+}
+
+/* Formulario de Usuarios */
+.formulario-usuarios {
+    flex: 1; /* Mantén la distribución del espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    background-color: white; /* Fondo blanco */
+    padding: 1rem; /* Añade un margen interno para separación */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto flotante */
+}
+
+/* Asegura que los textos del formulario sean legibles */
+.formulario-usuarios h3,
+.formulario-usuarios label,
+.formulario-usuarios input,
+.formulario-usuarios button {
+    color: #333; /* Color oscuro para contraste */
+}
+
+/* Botón dentro del formulario */
+form button {
+    background-color: #007BFF; /* Color azul para destacar */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+/* Títulos dentro de las áreas de tabla y formulario */
+.tabla-usuarios h3, .formulario-usuarios h3 {
+    text-align: center; /* Alinea los textos en el centro de su contenedor */
+    margin-bottom: 1rem; /* Espacio inferior entre el título y su contenido */
+}
+/* Tabla de Validación */
+.tabla-validacion {
+    margin-top: 2rem;
+}
+
+.tabla-validacion h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Alinear botones horizontalmente */
+.table td .btn {
+    display: inline-flex; /* Cambia la disposición a horizontal */
+    align-items: center; /* Alinea íconos verticalmente */
+    gap: 0.4rem; /* Espacio entre botones */
+    padding: 0.4rem 0.6rem;
+    margin: 0; /* Sin margen vertical */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: white;
+}
+
+.btn i {
+    margin-right: 0.2rem;
+}
+
+/* Botones de acción */
+.btn.editar {
+    background-color: #4CAF50;
+}
+
+.btn.eliminar {
+    background-color: #f44336;
+}
+
+.btn.aceptar {
+    background-color: #28a745;
+}
+
+.btn.rechazar {
+    background-color: #dc3545;
+}
+
+/* Formulario */
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form button {
+    padding: 0.5rem;
+    background-color: #598b53;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #41613d;
+}

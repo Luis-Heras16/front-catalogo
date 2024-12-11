@@ -1,0 +1,76 @@
+/* Footer */
+.footer {
+    background-color: #2d2d2d; /* Color de fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centra el texto */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around; /* Espacia las secciones uniformemente */
+    flex-wrap: wrap; /* Hace que sea responsivo */
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenido */
+    padding: 10px 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    box-sizing: border-box;
+    margin: 10px;
+    min-width: 200px; /* Asegura un tamaño mínimo en pantallas pequeñas */
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #d6e9d6; /* Color verde al pasar el cursor */
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #d6e9d6; /* Color verde al pasar el cursor */
+  }
+  
+  /* Adaptación a pantallas pequeñas */
+  @media (max-width: 768px) {
+    .footer-section {
+      flex: 1 1 100%; /* Cada sección ocupa todo el ancho */
+      text-align: center;
+    }
+  }
+  
