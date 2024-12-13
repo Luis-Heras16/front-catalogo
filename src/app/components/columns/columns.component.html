@@ -1,0 +1,13 @@
+<div class="leer-mas-container">
+  <div class="row">
+    @for (empresa of empresas; track $index) {
+    <div class="column">
+      <img [src]="empresa.logo" [alt]="empresa.nombre" class="image" />
+      <h5>{{ empresa.nombre }}</h5>
+      <button class="infobtn" (click)="goToEmpresa(empresa._id)">
+        Saber más
+      </button>
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div  style="height: 100dvh; display: flex; justify-content: center; align-items: center;">
+  <div class="login-container">
+    <h1>Bienvenido Administrador</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="name">Ingresa tu Matricula</label>
+      <input
+        type="text"
+        id="matricula"
+        name="matricula"
+        placeholder="Ingresa tu matricula"
+        formControlName="matricula"
+        required
+      />
+
+      <label for="contraseña">contraseña</label>
+      <input
+        type="contraseña"
+        id="contraseña"
+        name="contraseña"
+        placeholder="Ingresa tu contraseña"
+        formControlName="contraseña"
+        required
+      />
+
+      <button type="submit" class="login-btn" style="margin-bottom: 1rem;">Iniciar Sesión</button>
+      <button onclick="window.location.href='/';" class="btn-logout">
+        Cancelar
+      </button>
+    </form>
+  </div>
+</div>

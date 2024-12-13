@@ -1,0 +1,53 @@
+.formulario-usuarios {
+  width: 100%; /* Asegura que el formulario ocupe todo el ancho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra el formulario horizontalmente */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-usuarios h3,
+.formulario-usuarios label,
+.formulario-usuarios input,
+.formulario-usuarios button {
+  color: #333;
+}
+
+/* Agrupar los elementos del formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px; /* Limita el ancho máximo del grupo */
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Asegura que los inputs ocupen todo el ancho del grupo */
+}
+
+/* Botón dentro del formulario */
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+  max-width: 200px; /* Limita el ancho máximo del botón */
+}
+
+form button:hover {
+  background-color: #0056b3;
+}

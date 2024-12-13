@@ -1,0 +1,83 @@
+/* Estilo general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #cbffc5; /* Fondo verde claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Título */
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: medium;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Campos de entrada */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Botón de inicio de sesión */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+.login-btn:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+.btn-logout {
+  background-color: white; /* Fondo blanco */
+  color: #333; /* Texto e ícono oscuros */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Muestra el cursor de mano */
+  display: flex; /* Alineación del ícono y texto */
+  align-items: center; /* Centrado vertical */
+  gap: 0.5rem; /* Espacio entre ícono y texto */
+  width: 100%;
+  justify-content: center;
+}
+
+/* Efectos al pasar el cursor */
+.btn-logout:hover {
+  background-color: #f4f4f4; /* Fondo ligeramente más oscuro */
+  color: #000; /* Texto más oscuro */
+}

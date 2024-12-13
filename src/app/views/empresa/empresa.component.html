@@ -1,0 +1,44 @@
+<header class="navbar">
+  <button class="btn home-btn" onclick="window.location.href='/';">
+    <span class="material-icons">home</span>
+  </button>
+</header>
+
+<div class="container" style="height: 100dvh;">
+  <!-- Columna Izquierda -->
+  <div class="left-column">
+    @if (empresa?.logo && empresa?.nombre) {
+    <img [src]="empresa?.logo" [alt]="empresa?.nombre" class="logo" />
+    }
+
+    <h3>Beneficios</h3>
+    @if (empresa && empresa.beneficios.length > 0) {
+      <ul class="item-list">
+        @for (beneficio of empresa.beneficios; track $index) {
+          <li>{{beneficio}} <span class="checkmark">✔</span></li>
+        }
+      </ul>
+    } @else {
+      <p>No hay beneficios disponibles</p>
+    }
+  </div>
+
+  <!-- Columna Central -->
+  <div class="center-column">
+    <h1>{{ empresa?.nombre }}</h1>
+    <p>
+      {{ empresa?.descripcion }}
+    </p>
+    @if (empresa && empresa.vacantes.length > 0) {
+      @for (vacante of empresa.vacantes; track $index) {
+      <h4>{{ vacante.titulo }}</h4>
+      <p>{{ vacante.descripcion }}</p>
+      <ul>
+        @for (requisito of vacante.requisitos; track $index) {
+        <li>{{ requisito }}</li>
+        }
+      </ul>
+      }
+    }
+  </div>
+</div>

@@ -1,0 +1,130 @@
+<div class="formulario-usuarios">
+  <h3>Añadir Nueva Empresa</h3>
+  <form [formGroup]="empresaForm" (ngSubmit)="registrarEmpresa()">
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        formControlName="nombre"
+        placeholder="Ingresa el nombre"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <input
+        type="text"
+        id="descripcion"
+        formControlName="descripcion"
+        placeholder="Ingresa la descripción"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="logo">Logo</label>
+      <input
+        type="text"
+        id="logo"
+        formControlName="logo"
+        placeholder="Ingresa el path del logo"
+      />
+    </div>
+
+    <div formArrayName="vacantes">
+      @for (vacante of vacantes.controls; track $index; let i = $index) {
+      <div [formGroupName]="i">
+        <h4>Vacante {{ i + 1 }}</h4>
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input
+            type="text"
+            formControlName="titulo"
+            placeholder="Ingresa el título"
+          />
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción</label>
+          <input
+            type="text"
+            formControlName="descripcion"
+            placeholder="Ingresa la descripción"
+          />
+        </div>
+        <!-- <div formArrayName="requisitos">
+            @for (requisito of vacante.get('requisitos')!.controls; track $index; let j = $index) {
+              <div class="form-group">
+                <label for="requisito">Requisito {{ j + 1 }}</label>
+                <input type="text" [formControlName]="j" placeholder="Ingresa el requisito" />
+              </div>
+            }
+            <button type="button" (click)="addRequisito(i)">Añadir Requisito</button>
+          </div> -->
+      </div>
+      }
+      <button type="button" (click)="addVacante()" style="margin-bottom: 2rem;">Añadir Vacante</button>
+    </div>
+
+    <div formArrayName="beneficios">
+      <h4>Beneficios</h4>
+      @for (beneficio of beneficios.controls; track $index; let b = $index) {
+      <div class="form-group">
+        <label for="beneficio">Beneficio {{ b + 1 }}</label>
+        <input
+          type="text"
+          [formControlName]="b"
+          placeholder="Ingresa el beneficio"
+        />
+        <button
+          type="button"
+          style="margin-block: 2rem; background-color: red;"
+          (click)="removeBeneficio(b)"
+        >
+          Eliminar Beneficio
+        </button>
+      </div>
+      }
+      <button
+        type="button"
+        (click)="addBeneficio()"
+        style="margin-bottom: 2rem"
+      >
+        Añadir Beneficio
+      </button>
+    </div>
+
+    <div formGroupName="contacto">
+      <h4>Contacto</h4>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input
+          type="text"
+          formControlName="telefono"
+          placeholder="Ingresa el teléfono"
+        />
+      </div>
+      <div formArrayName="emails">
+        @for (email of emails.controls; track $index; let k = $index) {
+        <div class="form-group">
+          <label for="email">Email {{ k + 1 }}</label>
+          <input
+            type="email"
+            [formControlName]="k"
+            placeholder="Ingresa el email"
+          />
+        </div>
+        }
+        <button type="button" (click)="addEmail()" style="margin-bottom: 2rem;">Añadir Email</button>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn agregar"
+      style="background-color: chartreuse; margin-bottom: 2rem;"
+    >
+      Agregar Empresa
+    </button>
+  </form>
+</div>

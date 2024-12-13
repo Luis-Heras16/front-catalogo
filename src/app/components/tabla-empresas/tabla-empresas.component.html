@@ -1,0 +1,50 @@
+<!-- Tabla de Usuarios -->
+<div class="tabla-usuarios">
+  <h3>Empresas Registrados</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Logo</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Contacto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (empresas && empresas.length >0) { @for (empresa of empresas; track
+      $index) {
+      <tr>
+        <td>{{ empresa._id }}</td>
+        <td>
+          <img style="width: 50px" [src]="empresa.logo" [alt]="empresa.logo" />
+        </td>
+        <td>{{ empresa.nombre }}</td>
+        <td>{{ empresa.descripcion }}</td>
+        <td>{{ empresa.contacto.telefono }}</td>
+        <td
+          style="
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <button class="btn editar" style="background-color: steelblue">
+            Editar
+          </button>
+          <button class="btn editar" (click)="goToEmpresa(empresa._id)">
+            Ver
+          </button>
+          <button class="btn eliminar" (click)="borrarEmpresa(empresa._id)">
+            Eliminar
+          </button>
+        </td>
+      </tr>
+      } }
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><h3>Administración de Empresas</h3></li>
+    <li>
+      <button class="btn-logout" (click)="logout()">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<section id="usuarios" class="section">
+  <div class="main-content">
+    <app-tabla-empresas
+      (empresaEliminada)="onEmpresasModificadas()"
+      [empresas]="empresas"
+    />
+
+    <app-formulario-empresa
+      (empresaCreada)="onEmpresasModificadas()"
+      [empresas]="empresas"
+    />
+  </div>
+</section>
